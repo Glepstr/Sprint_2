@@ -26,9 +26,12 @@ class EmployeeSalary:
     def set_hourly_payment(cls, value):
         cls.hourly_payment = value
 
-    def salary(self, hours):
-        salary = hours * self.hourly_payment
-        return salary
+    def salary(self):
+        sal = self.hours * self.hourly_payment
+        return sal
     
-Jhon = EmployeeSalary('Jhon', 3, 5, 'saa.sa@sd.rs')
-print(Jhon.salary(3))
+EmployeeSalary.set_hourly_payment(220)
+print(EmployeeSalary.hourly_payment)
+
+jhon = EmployeeSalary("Jhon", 10, rest_days=10, email="s.s@s.s")
+print(jhon.salary())
